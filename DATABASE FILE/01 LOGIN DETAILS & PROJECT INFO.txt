@@ -1,0 +1,10 @@
+
+---Admin Login Details---
+
+Email   : admin@mail.com
+Password: Tirochiee123
+
+--Customer Login Details---
+Email   : customer@mail.com
+Password: Tirochiee123
+
