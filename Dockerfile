@@ -1,9 +1,9 @@
 FROM php:7.4-apache
 
-# Install system dependencies (added libonig-dev for mbstring support)
+# Install system dependencies (Added libpq-dev for Postgres support)
 RUN apt-get update && apt-get install -y \
-    git curl unzip libzip-dev zip libonig-dev \
-    && docker-php-ext-install pdo pdo_mysql mbstring zip exif
+    git curl unzip libzip-dev zip libonig-dev libpq-dev \
+    && docker-php-ext-install pdo pdo_mysql pdo_pgsql mbstring zip exif
 
 # Enable Apache mod_rewrite for Laravel routing
 RUN a2enmod rewrite
