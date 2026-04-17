@@ -14,8 +14,7 @@ WORKDIR /var/www
 COPY . .
 
 # Install PHP dependencies
-RUN composer install --no-dev --optimize-autoloader
-
+composer install --no-dev --optimize-autoloader --no-scripts
 # Laravel setup
 RUN php artisan config:clear && \
     php artisan route:clear && \
