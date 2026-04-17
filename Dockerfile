@@ -34,7 +34,6 @@ RUN php artisan config:clear && \
     php artisan view:clear
 
 # THE FREE TIER FIX: Run migrations and then start Apache
-CMD php artisan migrate --force && apache2-foreground
-
+CMD php artisan config:clear && php artisan cache:clear && php artisan migrate --force && apache2-foreground
 # Expose port 80 for Render
 EXPOSE 80
